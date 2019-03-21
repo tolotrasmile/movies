@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { createCache, createResource } from 'react-cache';
+import React, { Suspense } from "react";
+import { createCache, createResource } from "react-cache";
 
 const cache = createCache();
 const imageResource = createResource(

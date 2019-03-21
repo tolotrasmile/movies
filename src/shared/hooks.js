@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import queryString from 'query-string';
+import { useState, useEffect } from "react";
+import queryString from "query-string";
 
 export const useDebounce = (initialValue, delay) => {
   const [value, setValue] = useState(initialValue);
@@ -22,11 +22,15 @@ export const useDebounceState = (initialValue, delay) => {
 };
 
 export const useQuery = function() {
-  const { query: initialQuery = '' } = queryString.parse(window.location.search);
+  const { query: initialQuery = "" } = queryString.parse(
+    window.location.search
+  );
   const [query, setQuery] = useState(initialQuery);
   useEffect(
     () => {
-      const { query: lastQuery = '' } = queryString.parse(window.location.search);
+      const { query: lastQuery = "" } = queryString.parse(
+        window.location.search
+      );
       setQuery(lastQuery);
     },
     [query]
